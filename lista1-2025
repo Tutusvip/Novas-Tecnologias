@@ -1,0 +1,96 @@
+1
+def desenha_caixa():
+    print("Caixa:")
+    print("*********")
+    print("*       *")
+    print("*       *")
+    print("*       *")
+    print("*********")
+    print()
+
+def desenha_oval():
+    print("Oval:")
+    print("   *****   ")
+    print(" *       * ")
+    print("*         *")
+    print(" *       * ")
+    print("   *****   ")
+    print()
+
+def desenha_seta():
+    print("Seta:")
+    print("    *     ")
+    print("   ***    ")
+    print("  *****   ")
+    print(" *******  ")
+    print("   ***    ")
+    print("    *     ")
+    print()
+
+def desenha_losango():
+    print("Losango:")
+    print("    *    ")
+    print("   ***   ")
+    print("  *****  ")
+    print("   ***   ")
+    print("    *    ")
+    print()
+
+# Função principal que chama as funções para desenhar as formas
+def main():
+    desenha_caixa()
+    desenha_oval()
+    desenha_seta()
+    desenha_losango()
+
+if __name__ == "__main__":
+    main()
+---------------------------------------------------------------------------
+2
+def separar_digitos():
+    # Solicita ao usuário um número de 5 dígitos
+    numero = input("Digite um número de 5 dígitos: ")
+
+    # Verifica se o número tem exatamente 5 dígitos
+    if len(numero) != 5 or not numero.isdigit():
+        print("Por favor, digite um número válido de 5 dígitos.")
+        return
+
+    # Separa os dígitos e os imprime com três espaços entre eles
+    for i in range(len(numero)):
+        print(numero[i], end="   " if i < len(numero) - 1 else "")
+    print()  # Para a linha de saída
+
+# Chama a função principal
+separar_digitos()
+--------------------------------------------------------------------------
+3
+print("Digite os valores de P1(x,y) e P2(x,y): ")
+x1=float(input("x1: "))
+x1=float(input("Y1: "))
+x1=float(input("x2: "))
+x1=float(input("y2: "))
+
+dist = ((x1-x2)**2+(y1-y2)**2)**(1/2)
+
+print(f"A distancia entre P1({x1:.2f}{y1:.2f})",
+	f"e p2({x2:.2f},{y2:.2f}) é {dist}")
+--------------------------------------------------------------------------
+4
+frase = input("Digite uma frase: ")
+print(f"Na frase \"{frase}\" tem:\n",
+      f"A ou a: {frase.cont("a")+frase.cont("A")}\n,
+ 	f"E ou a: {frase.cont("e")+frase.cont("E")}\n,
+	f"I ou a: {frase.cont("i")+frase.cont("I")}\n,
+ 	f"O ou a: {frase.cont("o")+frase.cont("O")}\n,
+ 	f"U ou a: {frase.cont("u")+frase.cont("U")}\n)
+---------------------------------------------------------------------------
+msg = input("Digite a mensagemde 4 digitos: ")
+dig1 = (int(msg[0])+7)%10
+dig2 = (int(msg[1])+7)%10
+dig3 = (int(msg[2])+7)%10
+dig4 = (int(msg[3])+7)%10
+
+dig1,dig2,dig3,dig4 = dig3,dig4,dig1,dig2
+
+print("Criptografada: {dig1}{dig2}{dig2}{dig4}")
